@@ -1,0 +1,848 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/kinopoisk/movie"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/kinopoisk/movie">
+    <Prefix name="" IRI="http://www.semanticweb.org/kinopoisk/movie#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
+    <Prefix name="swrla" IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"/>
+    <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Онтология сценария выбора фильма в Кинопоиске</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Action"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Button"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Click"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InputField"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Interface"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MovieCard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reason"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Screen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Step"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Type"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#User"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#View"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasState"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#interactsWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isReasonFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#materializesIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#precedesAction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#precedesStep"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#triggers"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#codename"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BrowseMovies"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ClickAppIcon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ClickMovieCard"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ClickSearchButton"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Event_main_screen_view"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Event_movie_card_click"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Event_movie_details_view"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Event_search_button_click"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Event_search_input_type"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Event_search_results_view"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MainScreen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MovieCardInterstellar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MovieDetailsScreen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MovieLover"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OpenApp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ScrollMainScreen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SearchButton"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SearchInput"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SearchMovie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SearchResultsScreen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SearchScreen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SelectMovie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TypeSearchQuery"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ViewMainScreen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ViewMovieDetails"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ViewSearchResults"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WantToWatchMovie"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Button"/>
+        <Class IRI="#Interface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Click"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InputField"/>
+        <Class IRI="#Interface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MovieCard"/>
+        <Class IRI="#Interface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Screen"/>
+        <Class IRI="#Interface"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Type"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#View"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#BrowseMovies"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Click"/>
+        <NamedIndividual IRI="#ClickAppIcon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Click"/>
+        <NamedIndividual IRI="#ClickMovieCard"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Click"/>
+        <NamedIndividual IRI="#ClickSearchButton"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#Event_main_screen_view"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#Event_movie_card_click"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#Event_movie_details_view"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#Event_search_button_click"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#Event_search_input_type"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Event"/>
+        <NamedIndividual IRI="#Event_search_results_view"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Screen"/>
+        <NamedIndividual IRI="#MainScreen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieCard"/>
+        <NamedIndividual IRI="#MovieCardInterstellar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Screen"/>
+        <NamedIndividual IRI="#MovieDetailsScreen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#User"/>
+        <NamedIndividual IRI="#MovieLover"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#OpenApp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Click"/>
+        <NamedIndividual IRI="#ScrollMainScreen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Button"/>
+        <NamedIndividual IRI="#SearchButton"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InputField"/>
+        <NamedIndividual IRI="#SearchInput"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#SearchMovie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Screen"/>
+        <NamedIndividual IRI="#SearchResultsScreen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Screen"/>
+        <NamedIndividual IRI="#SearchScreen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Step"/>
+        <NamedIndividual IRI="#SelectMovie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Type"/>
+        <NamedIndividual IRI="#TypeSearchQuery"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#View"/>
+        <NamedIndividual IRI="#ViewMainScreen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#View"/>
+        <NamedIndividual IRI="#ViewMovieDetails"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#View"/>
+        <NamedIndividual IRI="#ViewSearchResults"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Reason"/>
+        <NamedIndividual IRI="#WantToWatchMovie"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#materializesIn"/>
+        <NamedIndividual IRI="#BrowseMovies"/>
+        <NamedIndividual IRI="#ScrollMainScreen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#materializesIn"/>
+        <NamedIndividual IRI="#BrowseMovies"/>
+        <NamedIndividual IRI="#ViewMainScreen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#precedesStep"/>
+        <NamedIndividual IRI="#BrowseMovies"/>
+        <NamedIndividual IRI="#SearchMovie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#precedesAction"/>
+        <NamedIndividual IRI="#ClickAppIcon"/>
+        <NamedIndividual IRI="#ViewMainScreen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interactsWith"/>
+        <NamedIndividual IRI="#ClickMovieCard"/>
+        <NamedIndividual IRI="#MovieCardInterstellar"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#precedesAction"/>
+        <NamedIndividual IRI="#ClickMovieCard"/>
+        <NamedIndividual IRI="#ViewMovieDetails"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interactsWith"/>
+        <NamedIndividual IRI="#ClickSearchButton"/>
+        <NamedIndividual IRI="#SearchButton"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#precedesAction"/>
+        <NamedIndividual IRI="#ClickSearchButton"/>
+        <NamedIndividual IRI="#TypeSearchQuery"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPartOf"/>
+        <NamedIndividual IRI="#MovieCardInterstellar"/>
+        <NamedIndividual IRI="#SearchResultsScreen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasState"/>
+        <NamedIndividual IRI="#MovieLover"/>
+        <NamedIndividual IRI="#WantToWatchMovie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#materializesIn"/>
+        <NamedIndividual IRI="#OpenApp"/>
+        <NamedIndividual IRI="#ClickAppIcon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#precedesStep"/>
+        <NamedIndividual IRI="#OpenApp"/>
+        <NamedIndividual IRI="#BrowseMovies"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interactsWith"/>
+        <NamedIndividual IRI="#ScrollMainScreen"/>
+        <NamedIndividual IRI="#MainScreen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#precedesAction"/>
+        <NamedIndividual IRI="#ScrollMainScreen"/>
+        <NamedIndividual IRI="#ClickSearchButton"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPartOf"/>
+        <NamedIndividual IRI="#SearchButton"/>
+        <NamedIndividual IRI="#MainScreen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isPartOf"/>
+        <NamedIndividual IRI="#SearchInput"/>
+        <NamedIndividual IRI="#SearchScreen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#materializesIn"/>
+        <NamedIndividual IRI="#SearchMovie"/>
+        <NamedIndividual IRI="#ClickSearchButton"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#materializesIn"/>
+        <NamedIndividual IRI="#SearchMovie"/>
+        <NamedIndividual IRI="#TypeSearchQuery"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#materializesIn"/>
+        <NamedIndividual IRI="#SearchMovie"/>
+        <NamedIndividual IRI="#ViewSearchResults"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#precedesStep"/>
+        <NamedIndividual IRI="#SearchMovie"/>
+        <NamedIndividual IRI="#SelectMovie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#materializesIn"/>
+        <NamedIndividual IRI="#SelectMovie"/>
+        <NamedIndividual IRI="#ClickMovieCard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#materializesIn"/>
+        <NamedIndividual IRI="#SelectMovie"/>
+        <NamedIndividual IRI="#ViewMovieDetails"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interactsWith"/>
+        <NamedIndividual IRI="#TypeSearchQuery"/>
+        <NamedIndividual IRI="#SearchInput"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#precedesAction"/>
+        <NamedIndividual IRI="#TypeSearchQuery"/>
+        <NamedIndividual IRI="#ViewSearchResults"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interactsWith"/>
+        <NamedIndividual IRI="#ViewMainScreen"/>
+        <NamedIndividual IRI="#MainScreen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#precedesAction"/>
+        <NamedIndividual IRI="#ViewMainScreen"/>
+        <NamedIndividual IRI="#ScrollMainScreen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interactsWith"/>
+        <NamedIndividual IRI="#ViewMovieDetails"/>
+        <NamedIndividual IRI="#MovieDetailsScreen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interactsWith"/>
+        <NamedIndividual IRI="#ViewSearchResults"/>
+        <NamedIndividual IRI="#SearchResultsScreen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#precedesAction"/>
+        <NamedIndividual IRI="#ViewSearchResults"/>
+        <NamedIndividual IRI="#ClickMovieCard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isReasonFor"/>
+        <NamedIndividual IRI="#WantToWatchMovie"/>
+        <NamedIndividual IRI="#BrowseMovies"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isReasonFor"/>
+        <NamedIndividual IRI="#WantToWatchMovie"/>
+        <NamedIndividual IRI="#OpenApp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isReasonFor"/>
+        <NamedIndividual IRI="#WantToWatchMovie"/>
+        <NamedIndividual IRI="#SearchMovie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isReasonFor"/>
+        <NamedIndividual IRI="#WantToWatchMovie"/>
+        <NamedIndividual IRI="#SelectMovie"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#BrowseMovies"/>
+        <Literal>Просмотр фильмов</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#ClickAppIcon"/>
+        <Literal>Клик по иконке приложения</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#ClickMovieCard"/>
+        <Literal>Клик по карточке фильма</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#ClickSearchButton"/>
+        <Literal>Клик по кнопке поиска</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Event_main_screen_view"/>
+        <Literal>main_screen_view</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Event_movie_card_click"/>
+        <Literal>movie_card_interstellar_click</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Event_movie_details_view"/>
+        <Literal>movie_details_view</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Event_search_button_click"/>
+        <Literal>search_button_click</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Event_search_input_type"/>
+        <Literal>search_input_type</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Event_search_results_view"/>
+        <Literal>search_results_view</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#codename"/>
+        <NamedIndividual IRI="#MainScreen"/>
+        <Literal>main_screen</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#MainScreen"/>
+        <Literal>Главный экран</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#codename"/>
+        <NamedIndividual IRI="#MovieCardInterstellar"/>
+        <Literal>movie_card_interstellar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#MovieCardInterstellar"/>
+        <Literal>Карточка фильма &quot;Интерстеллар&quot;</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#codename"/>
+        <NamedIndividual IRI="#MovieDetailsScreen"/>
+        <Literal>movie_details_screen</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#MovieDetailsScreen"/>
+        <Literal>Экран деталей фильма</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#MovieLover"/>
+        <Literal>Любитель кино</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#OpenApp"/>
+        <Literal>Открыть приложение</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#ScrollMainScreen"/>
+        <Literal>Прокрутка главного экрана</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#codename"/>
+        <NamedIndividual IRI="#SearchButton"/>
+        <Literal>search_button</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#SearchButton"/>
+        <Literal>Кнопка поиска</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#codename"/>
+        <NamedIndividual IRI="#SearchInput"/>
+        <Literal>search_input</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#SearchInput"/>
+        <Literal>Поле ввода поиска</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#SearchMovie"/>
+        <Literal>Поиск фильма</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#codename"/>
+        <NamedIndividual IRI="#SearchResultsScreen"/>
+        <Literal>search_results_screen</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#SearchResultsScreen"/>
+        <Literal>Экран результатов поиска</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#codename"/>
+        <NamedIndividual IRI="#SearchScreen"/>
+        <Literal>search_screen</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#SearchScreen"/>
+        <Literal>Экран поиска</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#SelectMovie"/>
+        <Literal>Выбор фильма</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#TypeSearchQuery"/>
+        <Literal>Ввод поискового запроса</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#ViewMainScreen"/>
+        <Literal>Просмотр главного экрана</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#ViewMovieDetails"/>
+        <Literal>Просмотр деталей фильма</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#ViewSearchResults"/>
+        <Literal>Просмотр результатов поиска</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#WantToWatchMovie"/>
+        <Literal>Хочу посмотреть фильм</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasState"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#interactsWith"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isPartOf"/>
+        <Class IRI="#Interface"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isReasonFor"/>
+        <Class IRI="#Reason"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#materializesIn"/>
+        <Class IRI="#Step"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#precedesAction"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#precedesStep"/>
+        <Class IRI="#Step"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#triggers"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasState"/>
+        <Class IRI="#Reason"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#interactsWith"/>
+        <Class IRI="#Interface"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isPartOf"/>
+        <Class IRI="#Interface"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isReasonFor"/>
+        <Class IRI="#Step"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#materializesIn"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#precedesAction"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#precedesStep"/>
+        <Class IRI="#Step"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#triggers"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#codename"/>
+        <Class IRI="#Interface"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#codename"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Click"/>
+                <Variable IRI="#a"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#interactsWith"/>
+                <Variable IRI="#a"/>
+                <NamedIndividual IRI="#MovieCardInterstellar"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#triggers"/>
+                <Variable IRI="#a"/>
+                <NamedIndividual IRI="#Event_movie_card_click"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Click"/>
+                <Variable IRI="#a"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#interactsWith"/>
+                <Variable IRI="#a"/>
+                <NamedIndividual IRI="#SearchButton"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#triggers"/>
+                <Variable IRI="#a"/>
+                <NamedIndividual IRI="#Event_search_button_click"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Type"/>
+                <Variable IRI="#a"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#interactsWith"/>
+                <Variable IRI="#a"/>
+                <NamedIndividual IRI="#SearchInput"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#triggers"/>
+                <Variable IRI="#a"/>
+                <NamedIndividual IRI="#Event_search_input_type"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#View"/>
+                <Variable IRI="#a"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#interactsWith"/>
+                <Variable IRI="#a"/>
+                <NamedIndividual IRI="#MainScreen"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#triggers"/>
+                <Variable IRI="#a"/>
+                <NamedIndividual IRI="#Event_main_screen_view"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#View"/>
+                <Variable IRI="#a"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#interactsWith"/>
+                <Variable IRI="#a"/>
+                <NamedIndividual IRI="#MovieDetailsScreen"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#triggers"/>
+                <Variable IRI="#a"/>
+                <NamedIndividual IRI="#Event_movie_details_view"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#View"/>
+                <Variable IRI="#a"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#interactsWith"/>
+                <Variable IRI="#a"/>
+                <NamedIndividual IRI="#SearchResultsScreen"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#triggers"/>
+                <Variable IRI="#a"/>
+                <NamedIndividual IRI="#Event_search_results_view"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
